@@ -1,7 +1,7 @@
 import {SafeAreaView, Text, View} from 'react-native';
 import React from 'react';
-import I18n from '../../../utils/language/i18n';
-import RobotoText from '../../../components/texts/roboto';
+import {RobotoText} from 'components';
+import I18n from 'utils/language/i18n';
 
 const HomeContainer = () => {
   return (

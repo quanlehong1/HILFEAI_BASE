@@ -5,20 +5,26 @@ import Toast from 'react-native-toast-message';
 import {toastConfig} from '../utils/common';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
-import screenNames from '../utils/screenName';
 import {SplashScreen, HomeScreen, ProfileScreen} from '../screens';
-import {Loading} from '../components';
 import BottomTabBar from '../components/bottomTabBar/BottomTabBar';
+import {Loading} from 'components';
+import {screenNames} from 'utils/screenName';
 
 const screenOptions = {
   cardStyle: {backgroundColor: colors.white},
   headerShown: false,
 };
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<ApplicationStackParamList>();
 const BottomTab = createBottomTabNavigator();
 const Home = createStackNavigator();
 const Profile = createStackNavigator();
+
+export type ApplicationStackParamList = {
+  [screenNames.SPLASH_SCREEN]: undefined;
+  [screenNames.HOME_SCREEN]: undefined;
+  [screenNames.BOTTOM_TAB_STACK]: undefined;
+};
 
 export const RootStack = () => {
   return (

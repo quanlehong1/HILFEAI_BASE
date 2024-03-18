@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import React, {useEffect} from 'react';
-import screenNames from '../../utils/screenName';
 import {navigateAndClearStack} from '../../navigation/service';
+import {screenNames} from 'utils/screenName';
 
 const SplashScreen = () => {
   useEffect(() => {

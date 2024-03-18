@@ -8,10 +8,10 @@ import {
   StyleSheet,
 } from 'react-native';
 import colors from '../../utils/colors';
-import screenNames from '../../utils/screenName';
 import DeviceInfo from 'react-native-device-info';
 import images from '../../utils/images';
 import {sizes} from '../../utils/sizings';
+import {screenNames} from 'utils/screenName';
 
 export default function BottomTabBar({state, descriptors, navigation}: any) {
   const focusedOptions = descriptors[state.routes[state.index].key].options;

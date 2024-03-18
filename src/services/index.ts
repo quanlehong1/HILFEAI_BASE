@@ -1,15 +1,17 @@
 import axios from 'axios';
-import store from '../src/store';
+import store from '../store';
 import {useDispatch} from 'react-redux';
-import {loadingAction} from '../src/store/actions/loadingAction';
+import {loadingAction} from '../store/actions/loadingAction';
 
-import useStorage, {USER_DATA, getUserStorage} from '../src/hooks/useStorage';
-import I18n from '../src/utils/language/i18n';
-import {userDataAction} from '../src/store/actions/userActions';
+// import useStorage, {USER_DATA, getUserStorage} from '../src/hooks/useStorage';
+import useStorage, {USER_DATA, getUserStorage} from '../hooks/useStorage';
+import I18n from '../utils/language/i18n';
+import {userDataAction} from '../store/actions/userActions';
 import AsyncStorage from '@react-native-community/async-storage';
 import NetInfo from '@react-native-community/netinfo';
 import Config from 'react-native-config';
-import {toast} from '../src/utils/common';
+import {toast} from '../utils/common';
+
 const getUserStorageLogin = async (key: string) => {
   try {
     const value = await AsyncStorage.getItem(key);
