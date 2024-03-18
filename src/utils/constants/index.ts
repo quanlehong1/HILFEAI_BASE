@@ -5,4 +5,11 @@ export const CONSTANTS = {
     channelName: 'react-native-code-base',
     channelDescription: 'react-native-code-base',
   },
+  weights: {
+    bold: 'bold',
+    medium: 'medium',
+    light: 'light',
+    regular: 'regular',
+    thin: 'thin',
+  },
 };
